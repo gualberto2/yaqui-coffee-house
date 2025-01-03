@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless-yaqui-coffee-house
+
+  SAM Template for yaqui-coffee-house
+  
+Globals:
+  Function:
+    Timeout: 10
+
+Parameters:
+  Origin:
+    Type: String
+    Description: The URL of the Origin
+
+Resources:
+  SvelteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: site/
+      MemorySize: 512
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Environment:
+        Variables:
+          ORIGIN: !Ref Origin
+      Events:
+        RootEvent:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: any
+        ProxyEvent:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: any
+    Metadata:
+      DockerTag: v1
+      DockerContext: ./site
+      Dockerfile: Dockerfile.lambda
+
+
+Outputs:
+  SvelteFunctionURL:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/"
