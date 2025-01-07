@@ -22,7 +22,7 @@ jobs:
           aws-region: us-west-1
 
       - name: Build Static Site
-        run: npm run build
+        run: npm ci && npm run build
 
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./build/ s3://yaqui-coffee-house --delete
