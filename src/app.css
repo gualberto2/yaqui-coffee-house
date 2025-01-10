@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overscroll-behavior: none; /* or overscroll-behavior-y: none */
+}
+.montserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sherlock';
+	src: url('/fonts/sherlock.ttf'), format('truetype');
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -72,6 +90,10 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+.font-hero {
+	font-family: 'Sherlock';
 }
 
 .hero-bg {

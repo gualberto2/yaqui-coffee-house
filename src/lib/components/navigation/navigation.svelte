@@ -11,85 +11,98 @@
 	];
 </script>
 
-<nav
-	class="sticky top-0 z-50 mx-auto flex h-36 w-full flex-row items-center justify-between bg-[#FEF8EE] px-6 py-4 sm:h-40 sm:flex-col"
->
+<nav class="relative flex flex-row items-center justify-center px-6 py-2 sm:hidden">
 	<Sheet.Root>
-		<Sheet.Trigger class="block sm:hidden"><Menu class="h-8 w-8" /></Sheet.Trigger>
-		<Sheet.Content size="lg" side="left" class="w-full pt-20">
-			<div class="flex flex-col items-center gap-5">
-				{#each links as link}
-					<a
-						href={link.href}
-						class="w-full cursor-pointer rounded-xl px-4 py-4 text-center text-xl font-bold tracking-[110%] text-neutral-800 transition duration-150 ease-in hover:bg-neutral-200 hover:text-neutral-500"
+		<Sheet.Trigger class="absolute left-5 block  sm:hidden"><Menu class="h-8 w-8" /></Sheet.Trigger>
+		<Sheet.Content side="left" size="lg" class="w-full space-y-10 ">
+			<div class="flex w-full items-center justify-center px-10">
+				<Sheet.Close class="flex w-full flex-col items-center justify-center gap-5 pt-20 uppercase">
+					{#each links as link}
+						<a
+							href={link.href}
+							class="w-full cursor-pointer rounded-2xl py-3 text-center text-xl font-medium
+						text-neutral-800 transition duration-150 ease-in hover:bg-neutral-300"
+						>
+							{link.name}
+						</a>
+					{/each}
+				</Sheet.Close>
+			</div>
+			<div class="flex flex-row items-center justify-center gap-8">
+				<a
+					aria-label="Instagram Link Button"
+					href="/"
+					class="cursor-pointer rounded-2xl p-2 text-center text-xl font-medium
+				text-neutral-800 transition duration-150 ease-in hover:bg-neutral-300"
+				>
+					<Instagram class="h-10 w-10" />
+				</a>
+				<a
+					aria-label="Yelp Link Button"
+					href="/"
+					class="cursor-pointer rounded-2xl p-2 text-center text-xl font-medium
+			text-neutral-800 transition duration-150 ease-in hover:bg-neutral-300"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						fill="currentColor"
+						class="bi bi-yelp"
+						viewBox="0 0 16 16"
 					>
-						{link.name}
-					</a>
-				{/each}
-				<div class="w-full">
-					<div class="flex flex-row items-center justify-center gap-7">
-						<div
-							class="flex h-16 w-16 items-center justify-center rounded-xl p-4 transition duration-150 ease-in hover:bg-neutral-300"
-						>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-								><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
-									d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-								/></svg
-							>
-						</div>
-						<div
-							class="flex h-16 w-16 items-center justify-center rounded-xl p-4 transition duration-150 ease-in hover:bg-neutral-300"
-						>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-								><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
-									d="M42.9 240.3l99.6 48.6c19.2 9.4 16.2 37.5-4.5 42.7L30.5 358.5a22.8 22.8 0 0 1 -28.2-19.6 197.2 197.2 0 0 1 9-85.3 22.8 22.8 0 0 1 31.6-13.2zm44 239.3a199.5 199.5 0 0 0 79.4 32.1A22.8 22.8 0 0 0 192.9 490l3.9-110.8c.7-21.3-25.5-31.9-39.8-16.1l-74.2 82.4a22.8 22.8 0 0 0 4.1 34.1zm145.3-109.9l58.8 94a22.9 22.9 0 0 0 34 5.5 198.4 198.4 0 0 0 52.7-67.6A23 23 0 0 0 364.2 370l-105.4-34.3c-20.3-6.5-37.8 15.8-26.5 33.9zm148.3-132.2a197.4 197.4 0 0 0 -50.4-69.3 22.9 22.9 0 0 0 -34 4.4l-62 91.9c-11.9 17.7 4.7 40.6 25.2 34.7L366 268.6a23 23 0 0 0 14.6-31.2zM62.1 30.2a22.9 22.9 0 0 0 -9.9 32l104.1 180.4c11.7 20.2 42.6 11.9 42.6-11.4V22.9a22.7 22.7 0 0 0 -24.5-22.8 320.4 320.4 0 0 0 -112.3 30.1z"
-								/></svg
-							>
-						</div>
-					</div>
-				</div>
-				<div></div>
+						<path
+							d="m4.188 10.095.736-.17.073-.02A.813.813 0 0 0 5.45 8.65a1 1 0 0 0-.3-.258 3 3 0 0 0-.428-.198l-.808-.295a76 76 0 0 0-1.364-.493C2.253 7.3 2 7.208 1.783 7.14c-.041-.013-.087-.025-.124-.038a2.1 2.1 0 0 0-.606-.116.72.72 0 0 0-.572.245 2 2 0 0 0-.105.132 1.6 1.6 0 0 0-.155.309c-.15.443-.225.908-.22 1.376.002.423.013.966.246 1.334a.8.8 0 0 0 .22.24c.166.114.333.129.507.141.26.019.513-.045.764-.103l2.447-.566zm8.219-3.911a4.2 4.2 0 0 0-.8-1.14 1.6 1.6 0 0 0-.275-.21 2 2 0 0 0-.15-.073.72.72 0 0 0-.621.031c-.142.07-.294.182-.496.37-.028.028-.063.06-.094.089-.167.156-.353.35-.574.575q-.51.516-1.01 1.042l-.598.62a3 3 0 0 0-.298.365 1 1 0 0 0-.157.364.8.8 0 0 0 .007.301q0 .007.003.013a.81.81 0 0 0 .945.616l.074-.014 3.185-.736c.251-.058.506-.112.732-.242.151-.088.295-.175.394-.35a.8.8 0 0 0 .093-.313c.05-.434-.178-.927-.36-1.308M6.706 7.523c.23-.29.23-.722.25-1.075.07-1.181.143-2.362.201-3.543.022-.448.07-.89.044-1.34-.022-.372-.025-.799-.26-1.104C6.528-.077 5.644-.033 5.04.05q-.278.038-.553.104a8 8 0 0 0-.543.149c-.58.19-1.393.537-1.53 1.204-.078.377.106.763.249 1.107.173.417.41.792.625 1.185.57 1.036 1.15 2.066 1.728 3.097.172.308.36.697.695.857q.033.015.068.025c.15.057.313.068.469.032l.028-.007a.8.8 0 0 0 .377-.226zm-.276 3.161a.74.74 0 0 0-.923-.234 1 1 0 0 0-.145.09 2 2 0 0 0-.346.354c-.026.033-.05.077-.08.104l-.512.705q-.435.591-.861 1.193c-.185.26-.346.479-.472.673l-.072.11c-.152.235-.238.406-.282.559a.7.7 0 0 0-.03.314c.013.11.05.217.108.312q.046.07.1.138a1.6 1.6 0 0 0 .257.237 4.5 4.5 0 0 0 2.196.76 1.6 1.6 0 0 0 .349-.027 2 2 0 0 0 .163-.048.8.8 0 0 0 .278-.178.7.7 0 0 0 .17-.266c.059-.147.098-.335.123-.613l.012-.13c.02-.231.03-.502.045-.821q.037-.735.06-1.469l.033-.87a2.1 2.1 0 0 0-.055-.623 1 1 0 0 0-.117-.27Zm5.783 1.362a2.2 2.2 0 0 0-.498-.378l-.112-.067c-.199-.12-.438-.246-.719-.398q-.644-.353-1.295-.695l-.767-.407c-.04-.012-.08-.04-.118-.059a2 2 0 0 0-.466-.166 1 1 0 0 0-.17-.018.74.74 0 0 0-.725.616 1 1 0 0 0 .01.293c.038.204.13.406.224.583l.41.768q.341.65.696 1.294c.152.28.28.52.398.719q.036.057.068.112c.145.239.261.39.379.497a.73.73 0 0 0 .596.201 2 2 0 0 0 .168-.029 1.6 1.6 0 0 0 .325-.129 4 4 0 0 0 .855-.64c.306-.3.577-.63.788-1.006q.045-.08.076-.165a2 2 0 0 0 .051-.161q.019-.083.029-.168a.8.8 0 0 0-.038-.327.7.7 0 0 0-.165-.27"
+						/>
+					</svg>
+				</a>
 			</div>
 		</Sheet.Content>
 	</Sheet.Root>
-	<a class="h-5/6" href="/">
-		<img src={logo} alt="" class="h-full cursor-pointer object-cover" />
+	<a
+		href="/"
+		class="duration-400 flex h-20
+		   items-center justify-center overflow-hidden transition-[height]"
+	>
+		<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
 	</a>
-	<div class="hidden h-1/6 py-1 sm:block">
-		<div class="flex flex-row items-center gap-5">
-			{#each links as link}
-				<a
-					href={link.href}
-					class="cursor-pointer text-lg font-medium text-neutral-800 transition duration-150 ease-in hover:text-neutral-500"
-				>
-					{link.name}
-				</a>
-			{/each}
-			<div class="flex flex-row items-center justify-center gap-4">
-				<div
-					class="flex h-7 w-7 items-center justify-center rounded-xl p-1 transition duration-150 ease-in hover:bg-neutral-300"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-						><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
-							d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-						/></svg
-					>
-				</div>
-				<div
-					class="flex h-7 w-7 items-center justify-center rounded-xl p-1 transition duration-150 ease-in hover:bg-neutral-300"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-						><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
-							d="M42.9 240.3l99.6 48.6c19.2 9.4 16.2 37.5-4.5 42.7L30.5 358.5a22.8 22.8 0 0 1 -28.2-19.6 197.2 197.2 0 0 1 9-85.3 22.8 22.8 0 0 1 31.6-13.2zm44 239.3a199.5 199.5 0 0 0 79.4 32.1A22.8 22.8 0 0 0 192.9 490l3.9-110.8c.7-21.3-25.5-31.9-39.8-16.1l-74.2 82.4a22.8 22.8 0 0 0 4.1 34.1zm145.3-109.9l58.8 94a22.9 22.9 0 0 0 34 5.5 198.4 198.4 0 0 0 52.7-67.6A23 23 0 0 0 364.2 370l-105.4-34.3c-20.3-6.5-37.8 15.8-26.5 33.9zm148.3-132.2a197.4 197.4 0 0 0 -50.4-69.3 22.9 22.9 0 0 0 -34 4.4l-62 91.9c-11.9 17.7 4.7 40.6 25.2 34.7L366 268.6a23 23 0 0 0 14.6-31.2zM62.1 30.2a22.9 22.9 0 0 0 -9.9 32l104.1 180.4c11.7 20.2 42.6 11.9 42.6-11.4V22.9a22.7 22.7 0 0 0 -24.5-22.8 320.4 320.4 0 0 0 -112.3 30.1z"
-						/></svg
-					>
+</nav>
+
+<nav
+	class="
+           duration-400 top-0 z-50 hidden w-full overflow-hidden
+ transition-[height]
+           sm:block"
+>
+	<div class="duration-400 flex h-full w-full flex-col px-6 py-2 transition-[height]">
+		<a
+			href="/"
+			class="duration-400 flex h-20
+			       items-center justify-center overflow-hidden transition-[height]"
+		>
+			<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
+		</a>
+
+		<div
+			class="duration-400 hidden h-16 flex-col
+			       items-center justify-center overflow-hidden transition-[height] sm:flex
+			       "
+		>
+			<div class="">
+				<div class="flex flex-row items-center gap-5">
+					{#each links as link}
+						<a
+							href={link.href}
+							class="cursor-pointer text-lg font-medium text-neutral-800 transition duration-150 ease-in hover:text-neutral-500"
+						>
+							{link.name}
+						</a>
+					{/each}
+					<div class="flex flex-row items-center justify-center gap-4">
+						<Instagram />
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- <div
-		class="text-normal w-min rounded-2xl bg-amber-500 p-4 text-center font-medium uppercase leading-[110%] text-white"
-	>
-		<a href="/" class="text-wrap text-center"> Order Online </a>
-	</div> -->
 </nav>
