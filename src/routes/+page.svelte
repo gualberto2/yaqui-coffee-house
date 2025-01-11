@@ -63,6 +63,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div
 		class="sm: mx-auto flex h-[20rem] w-full flex-row items-center gap-2 px-2 sm:h-[30rem] sm:px-8 md:h-[35rem]"
 	>
@@ -99,12 +100,14 @@
 					</h3>
 				</div>
 				<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[110%]">
+
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam voluptates eos autem
 					sunt, magnam quae atque similique dolore! Provident aliquam maiores cumque ipsa minus
 					adipisci obcaecati mollitia tempora et deserunt?
 				</p>
 			</div>
 			<!-- <div class="flex flex-col md:space-y-5">
+
 				<div class="flex flex-row items-center">
 					<span class="mr-3 h-10 w-1 rounded-xl bg-[#1e2a4a]"></span>
 					<h3 class=" text-4xl font-medium capitalize leading-[125%] tracking-[-0.96px]">
@@ -124,4 +127,5 @@
 			</div> -->
 		</div>
 	</div>
+
 </section>

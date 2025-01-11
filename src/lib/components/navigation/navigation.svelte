@@ -21,6 +21,7 @@
 					autofocus={false}
 					class="flex w-full flex-col items-center justify-center gap-5 pt-20 uppercase"
 				>
+
 					{#each links as link}
 						<a
 							href={link.href}
@@ -71,6 +72,7 @@
 		<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
 	</a>
 	<Button size="sm" class="absolute right-5 block text-wrap bg-amber-600 sm:hidden">Order</Button>
+
 </nav>
 
 <nav
