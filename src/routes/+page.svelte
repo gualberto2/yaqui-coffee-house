@@ -138,7 +138,7 @@
 		</div>
 
 		<div class="mx-auto max-w-3xl">
-			<form class="space-y-3" action="?/contact">
+			<form class="space-y-3">
 				<div class="flex flex-row items-center gap-3 text-white">
 					<Input
 						min={2}
