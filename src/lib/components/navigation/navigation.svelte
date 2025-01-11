@@ -2,6 +2,7 @@
 	import logo from '$lib/images/logo.png';
 	import * as Sheet from '$lib/components/ui/sheet/index.js';
 	import { Instagram, Menu } from 'lucide-svelte';
+	import Button from '../ui/button/button.svelte';
 
 	const links = [
 		{ name: 'Our Story', href: '#' },
@@ -16,7 +17,10 @@
 		<Sheet.Trigger class="absolute left-5 block  sm:hidden"><Menu class="h-8 w-8" /></Sheet.Trigger>
 		<Sheet.Content side="left" size="lg" class="w-full space-y-10 ">
 			<div class="flex w-full items-center justify-center px-10">
-				<Sheet.Close class="flex w-full flex-col items-center justify-center gap-5 pt-20 uppercase">
+				<Sheet.Close
+					autofocus={false}
+					class="flex w-full flex-col items-center justify-center gap-5 pt-20 uppercase"
+				>
 					{#each links as link}
 						<a
 							href={link.href}
@@ -66,6 +70,7 @@
 	>
 		<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
 	</a>
+	<Button size="sm" class="absolute right-5 block text-wrap bg-amber-600 sm:hidden">Order</Button>
 </nav>
 
 <nav
