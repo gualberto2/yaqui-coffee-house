@@ -41,11 +41,11 @@
 			href="https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="text-md mb-4 cursor-pointer text-center text-lg font-light leading-[150%] tracking-[110%] underline transition duration-150 ease-in-out hover:text-gray-500"
+			class="text-md mb-4 cursor-pointer text-center text-lg font-light leading-[150%] tracking-[1.1px] underline transition duration-150 ease-in-out hover:text-gray-500"
 		>
 			1930 Avenida Escaya suite 101, Chula Vista, CA 91913
 		</a>
-		<div class="flex flex-col items-center justify-center gap-1.5 leading-[150%] tracking-[110%]">
+		<div class="flex flex-col items-center justify-center gap-1.5 leading-[150%] tracking-[1.1px]">
 			<div class="flex flex-row items-center justify-center gap-2 text-lg font-light">
 				<p>M-F</p>
 				<p>|</p>
@@ -77,7 +77,7 @@
 		<h3 class=" text-center text-4xl font-semibold capitalize leading-[125%] tracking-[-0.96px]">
 			Start Your Day Right.
 		</h3>
-		<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[110%]">
+		<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]"></p>
 			Nestled in the heart of Chula Vista, CA, Yaqui Coffee House exudes warmth and welcomes guests
 			with open arms. With its cozy atmosphere, friendly staff, and a menu bursting with
 			mouthwatering dishes, it's the perfect place to unwind and savor a delightful meal. Our
@@ -99,7 +99,7 @@
 						So Comfortable, You Might Forget You're Not at Home.
 					</h3>
 				</div>
-				<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[110%]">
+				<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]">
 
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam voluptates eos autem
 					sunt, magnam quae atque similique dolore! Provident aliquam maiores cumque ipsa minus
