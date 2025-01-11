@@ -77,7 +77,8 @@
 		<h3 class=" text-center text-4xl font-semibold capitalize leading-[125%] tracking-[-0.96px]">
 			Start Your Day Right.
 		</h3>
-		<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]"></p>
+		<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]">
+
 			Nestled in the heart of Chula Vista, CA, Yaqui Coffee House exudes warmth and welcomes guests
 			with open arms. With its cozy atmosphere, friendly staff, and a menu bursting with
 			mouthwatering dishes, it's the perfect place to unwind and savor a delightful meal. Our
@@ -127,5 +128,4 @@
 			</div> -->
 		</div>
 	</div>
-
 </section>
