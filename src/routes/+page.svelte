@@ -13,6 +13,7 @@
 	import section1image3 from '$lib/images/landing/section-1-image-3.jpg';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ParallaxScroll from '$lib/components/ui/parallax-scroll/parallax-scroll.svelte';
+	import { Input } from '$lib/components/ui/input';
 
 	const image = [image1, image2, image3, image4, image5, image6, image7, image8];
 </script>
@@ -41,7 +42,7 @@
 			href="https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="text-md mb-4 cursor-pointer text-center text-lg font-light leading-[150%] tracking-[1.1px] underline transition duration-150 ease-in-out hover:text-gray-500"
+			class="text-md mb-4 cursor-pointer px-1.5 text-center text-lg font-light leading-[150%] tracking-[1.1px] underline transition duration-150 ease-in-out hover:text-gray-500"
 		>
 			1930 Avenida Escaya suite 101, Chula Vista, CA 91913
 		</a>
@@ -78,7 +79,6 @@
 			Start Your Day Right.
 		</h3>
 		<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]">
-
 			Nestled in the heart of Chula Vista, CA, Yaqui Coffee House exudes warmth and welcomes guests
 			with open arms. With its cozy atmosphere, friendly staff, and a menu bursting with
 			mouthwatering dishes, it's the perfect place to unwind and savor a delightful meal. Our
@@ -101,7 +101,6 @@
 					</h3>
 				</div>
 				<p class="max-w-5xl text-lg font-extralight leading-[150%] tracking-[1.1px]">
-
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam voluptates eos autem
 					sunt, magnam quae atque similique dolore! Provident aliquam maiores cumque ipsa minus
 					adipisci obcaecati mollitia tempora et deserunt?
@@ -126,6 +125,51 @@
 					Explore our story →
 				</p>
 			</div> -->
+		</div>
+	</div>
+	<div class="my-20 bg-[#6a041d] py-10">
+		<div class="mb-5 text-center text-white">
+			<h4 class=" text-center text-4xl font-semibold capitalize leading-[125%] tracking-[-0.96px]">
+				Get In Touch.
+			</h4>
+			<p class="mx-auto text-center text-lg font-extralight leading-[150%] tracking-[1.1px]">
+				Fill out the form below and we will reach out shortly.
+			</p>
+		</div>
+
+		<div class="mx-auto max-w-3xl">
+			<form class="space-y-3" action="?/contact">
+				<div class="flex flex-row items-center gap-3 text-white">
+					<Input
+						min={2}
+						max={80}
+						required
+						placeholder="First Name"
+						class="border-neutral-300 bg-transparent caret-amber-300 placeholder:text-neutral-200"
+					/>
+					<Input
+						min={2}
+						max={80}
+						required
+						placeholder="Last Name"
+						class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
+					/>
+				</div>
+				<Input
+					min={2}
+					max={80}
+					required
+					placeholder="Email"
+					class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
+				/>
+				<Input
+					required
+					max={500}
+					placeholder="Message (Max 500 Characters)"
+					class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
+				/>
+				<button type="submit">Submit</button>
+			</form>
 		</div>
 	</div>
 </section>
