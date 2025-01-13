@@ -6,5 +6,7 @@
 </script>
 
 <Navigation />
-{@render children()}
+<section>
+	{@render children()}
+</section>
 <Footer />
