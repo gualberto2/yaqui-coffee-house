@@ -10,12 +10,23 @@
 	import aLittleBitAboutUs from '$lib/images/landing/a-little-bit-about-us.jpg';
 	import section1image from '$lib/images/landing/section-1-image.jpg';
 	import section1image2 from '$lib/images/landing/section-1-image-2.jpg';
+	import * as Dialog from '$lib/components/ui/dialog/index.js';
 	import section1image3 from '$lib/images/landing/section-1-image-3.jpg';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ParallaxScroll from '$lib/components/ui/parallax-scroll/parallax-scroll.svelte';
 	import { Input } from '$lib/components/ui/input';
 
 	const image = [image1, image2, image3, image4, image5, image6, image7, image8];
+
+	const loadForm = (open: boolean) => {
+		if (open) {
+			(window as any).hbspt.forms.create({
+				portalId: '48887664',
+				formId: '86c54468-9174-49c3-a719-0ee8edfcd045',
+				targret: '#contact-form'
+			});
+		}
+	};
 </script>
 
 <section class="hero-bg flex h-[40rem] flex-col items-center bg-black/60">
@@ -136,40 +147,15 @@
 				Fill out the form below and we will reach out shortly.
 			</p>
 		</div>
-
-		<div class="mx-auto max-w-3xl">
-			<form class="space-y-3">
-				<div class="flex flex-row items-center gap-3 text-white">
-					<Input
-						min={2}
-						max={80}
-						required
-						placeholder="First Name"
-						class="border-neutral-300 bg-transparent caret-amber-300 placeholder:text-neutral-200"
-					/>
-					<Input
-						min={2}
-						max={80}
-						required
-						placeholder="Last Name"
-						class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
-					/>
-				</div>
-				<Input
-					min={2}
-					max={80}
-					required
-					placeholder="Email"
-					class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
-				/>
-				<Input
-					required
-					max={500}
-					placeholder="Message (Max 500 Characters)"
-					class="border-neutral-300 bg-transparent text-amber-300  caret-amber-300 placeholder:text-neutral-200"
-				/>
-				<button type="submit">Submit</button>
-			</form>
+		<div>
+			<Dialog.Root onOpenChange={loadForm}>
+				<Dialog.Trigger class="w-full"
+					><Button variant="default" size="lg">Get in Contact</Button>
+				</Dialog.Trigger>
+				<Dialog.Content class="sm:max-w-[600px]">
+					<div id="contact-form"></div>
+				</Dialog.Content>
+			</Dialog.Root>
 		</div>
 	</div>
 </section>
