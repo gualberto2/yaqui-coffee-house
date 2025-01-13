@@ -23,7 +23,7 @@
 			(window as any).hbspt.forms.create({
 				portalId: '48887664',
 				formId: '86c54468-9174-49c3-a719-0ee8edfcd045',
-				targret: '#contact-form'
+				target: '#contact-form'
 			});
 		}
 	};
@@ -143,16 +143,19 @@
 			<h4 class=" text-center text-4xl font-semibold capitalize leading-[125%] tracking-[-0.96px]">
 				Get In Touch.
 			</h4>
-			<p class="mx-auto text-center text-lg font-extralight leading-[150%] tracking-[1.1px]">
-				Fill out the form below and we will reach out shortly.
-			</p>
 		</div>
 		<div>
 			<Dialog.Root onOpenChange={loadForm}>
 				<Dialog.Trigger class="w-full"
-					><Button variant="default" size="lg">Get in Contact</Button>
+					><Button variant="default" size="lg">Click To Fill Out Form</Button>
 				</Dialog.Trigger>
-				<Dialog.Content class="sm:max-w-[600px]">
+				<Dialog.Content class=" sm:max-w-[600px]">
+					<Dialog.Header>
+						<Dialog.Title>Get in Contact</Dialog.Title>
+						<Dialog.Description
+							>Fill out the form below and we will reach out shortly</Dialog.Description
+						>
+					</Dialog.Header>
 					<div id="contact-form"></div>
 				</Dialog.Content>
 			</Dialog.Root>
