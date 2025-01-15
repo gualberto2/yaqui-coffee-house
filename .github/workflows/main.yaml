@@ -25,4 +25,4 @@ jobs:
         run: npm ci && npm run build
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./build/ s3://codedilf.dev --delete
+        run: aws s3 sync ./build/ s3://codeelijahtext.com --delete
