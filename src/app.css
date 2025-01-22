@@ -13,16 +13,41 @@ body {
 	background-size: auto;
 	background-position: top left;
 }
+
+.arches-texture {
+	overscroll-behavior: none; /* or overscroll-behavior-y: none */
+	background-color: #9c4f20;
+	background-image: url('/src/lib/images/arches.png');
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+}
+.felt-texture {
+	overscroll-behavior: none; /* or overscroll-behavior-y: none */
+	background-color: #766521;
+	background-image: url('/src/lib/images/black-felt.png');
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+}
+
 .montserrat {
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 500;
 	font-style: normal;
 }
+.sonoma {
+	font-family: 'Sonoma', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	text-transform: uppercase;
+}
 
 @font-face {
-	font-family: 'Sherlock';
-	src: url('/fonts/sherlock.ttf'), format('truetype');
+	font-family: 'Sonoma';
+	src: url('/fonts/sonoma-desert/web-font/sonoma-webfont.woff'), format('truetype');
 }
 
 @layer base {
@@ -46,7 +71,7 @@ body {
 		--destructive: 0 72.2% 50.6%;
 		--destructive-foreground: 0 0% 98%;
 		--ring: 0 0% 3.9%;
-		--radius: 0.5rem;
+		--radius: 0.4rem;
 		--sidebar-background: 0 0% 98%;
 		--sidebar-foreground: 240 5.3% 26.1%;
 		--sidebar-primary: 240 5.9% 10%;
@@ -125,6 +150,6 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 1;
 }

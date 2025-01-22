@@ -22,7 +22,7 @@
 
 <div class={cn('w-full items-start overflow-y-auto', className)} bind:this={gridRef}>
 	<div
-		class="mx-auto grid max-w-5xl grid-cols-1 items-start gap-3 px-2 py-40 md:grid-cols-2 lg:grid-cols-3"
+		class="mx-auto grid max-w-7xl grid-cols-3 items-start gap-1.5 px-2 pb-40 sm:gap-3"
 		bind:this={gridRef}
 	>
 		<div class="grid gap-10">
@@ -31,7 +31,7 @@
 					<div use:motion>
 						<img
 							src={el}
-							class="!m-0 h-80 w-full gap-10 rounded-lg object-cover object-left-top !p-0"
+							class="!m-0 h-80 w-full gap-10 object-cover !p-0"
 							height="400"
 							width="400"
 							alt="thumbnail"
@@ -46,7 +46,7 @@
 					<div use:motion>
 						<img
 							src={el}
-							class="!m-0 h-80 w-full gap-10 rounded-lg object-cover object-left-top !p-0"
+							class="!m-0 h-80 w-full gap-10 object-cover !p-0"
 							height="400"
 							width="400"
 							alt="thumbnail"
@@ -61,7 +61,7 @@
 					<div use:motion>
 						<img
 							src={el}
-							class="!m-0 h-80 w-full gap-10 rounded-lg object-cover object-left-top !p-0"
+							class="!m-0 h-80 w-full gap-10 object-cover !p-0"
 							height="400"
 							width="400"
 							alt="thumbnail"

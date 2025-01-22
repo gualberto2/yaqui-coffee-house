@@ -5,33 +5,80 @@
 	import Button from '../ui/button/button.svelte';
 
 	const links = [
-		{ name: 'Our Story', href: '#' },
-		{ name: 'Contact', href: '#' },
-		{ name: 'Order Online', href: '#' },
-		{ name: 'Menu', href: '#' }
+		{ name: 'Our Story', href: '#our-story-section' },
+		{ name: 'Location', href: '#location-section' },
+		{ name: 'Hours', href: '#hours-section' },
+		{ name: 'Contact', href: '#contact-form-section' },
+		{ name: 'Menu', href: '/toast' }
 	];
+
+	function scrollToSection(event) {
+		event.preventDefault();
+		const targetId = event.currentTarget.getAttribute('href').substring(1);
+		const targetElement = document.getElementById(targetId);
+		if (targetElement) {
+			targetElement.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
-<nav class="relative flex flex-row items-center justify-center px-6 py-2 sm:hidden">
-	<Sheet.Root>
-		<Sheet.Trigger class="absolute left-5 block  sm:hidden"><Menu class="h-8 w-8" /></Sheet.Trigger>
-		<Sheet.Content side="left" size="lg" class="w-full space-y-10 ">
-			<div class="flex w-full items-center justify-center px-10">
-				<Sheet.Close
-					autofocus={false}
-					class="flex w-full flex-col items-center justify-center gap-5 pt-20 uppercase"
+<nav class="mx-10 hidden flex-row items-center justify-between py-3 lg:flex">
+	<div class="">
+		<a href="/" class="duration-400 flex h-32 items-center justify-center overflow-hidden">
+			<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
+		</a>
+	</div>
+	<div class="g items-cente flex flex-row gap-5">
+		<div class="flex flex-row items-center gap-5">
+			{#each links as link}
+				<a
+					href={link.href}
+					class="cursor-pointer text-2xl text-neutral-800 underline-offset-1 hover:underline"
+					on:click={link.name === 'Contact' ||
+					link.name === 'Our Story' ||
+					link.name === 'Location' ||
+					link.name === 'Hours'
+						? scrollToSection
+						: null}
 				>
+					{link.name}
+				</a>
+			{/each}
+		</div>
+		<div class="flex flex-row items-center gap-5">
+			<div class="flex cursor-pointer flex-row items-center justify-center gap-4 hover:underline">
+				<Instagram />
+			</div>
+		</div>
+		<Button size="lg" variant="default" class="ml-6 uppercase">Order Online</Button>
+	</div>
+</nav>
 
-					{#each links as link}
+<nav class="relative flex flex-row items-center justify-center px-6 py-2 lg:hidden">
+	<Sheet.Root>
+		<Sheet.Trigger class="absolute left-5 block  "><Menu class="h-8 w-8" /></Sheet.Trigger>
+		<Sheet.Content side="left" size="lg" class=" w-full space-y-10">
+			<div class="mt-20 flex w-full flex-col items-center justify-center gap-5 px-10">
+				{#each links as link}
+					<Sheet.Close
+						autofocus={false}
+						class="flex w-full flex-col items-center justify-center gap-5  uppercase"
+					>
 						<a
 							href={link.href}
-							class="w-full cursor-pointer rounded-2xl py-3 text-center text-xl font-medium
+							class="w-full cursor-pointer rounded-2xl py-3 text-center text-3xl font-medium
 						text-neutral-800 transition duration-150 ease-in hover:bg-neutral-300"
+							on:click={link.name === 'Contact' ||
+							link.name === 'Our Story' ||
+							link.name === 'Location' ||
+							link.name === 'Hours'
+								? scrollToSection
+								: null}
 						>
 							{link.name}
 						</a>
-					{/each}
-				</Sheet.Close>
+					</Sheet.Close>
+				{/each}
 			</div>
 			<div class="flex flex-row items-center justify-center gap-8">
 				<a
@@ -71,45 +118,5 @@
 	>
 		<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
 	</a>
-	<Button size="sm" class="absolute right-5 block text-wrap bg-amber-600 sm:hidden">Order</Button>
-
-</nav>
-
-<nav
-	class="
-           duration-400 top-0 z-50 hidden w-full overflow-hidden
- transition-[height]
-           sm:block"
->
-	<div class="duration-400 flex h-full w-full flex-col px-6 py-2 transition-[height]">
-		<a
-			href="/"
-			class="duration-400 flex h-20
-			       items-center justify-center overflow-hidden transition-[height]"
-		>
-			<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
-		</a>
-
-		<div
-			class="duration-400 hidden h-16 flex-col
-			       items-center justify-center overflow-hidden transition-[height] sm:flex
-			       "
-		>
-			<div class="">
-				<div class="flex flex-row items-center gap-5">
-					{#each links as link}
-						<a
-							href={link.href}
-							class="cursor-pointer text-lg font-medium text-neutral-800 transition duration-150 ease-in hover:text-neutral-500"
-						>
-							{link.name}
-						</a>
-					{/each}
-					<div class="flex flex-row items-center justify-center gap-4">
-						<Instagram />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<Button size="default" class="absolute right-5 block pb-1 text-center uppercase ">Order</Button>
 </nav>
