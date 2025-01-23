@@ -63,7 +63,7 @@ const config: Config = {
 				'yaqui-accent': '#7388A0',
 				'yaqui-muted': '#DAA46D',
 				'yaqui-background': '#fef8ee',
-				'yaqui-foreground': '#9C4F20',
+				'yaqui-foreground': '#6A041D',
 				'yaqui-tertiary': '#F7C565',
 				'yaqui-secondary': '#9C4F20'
 			},

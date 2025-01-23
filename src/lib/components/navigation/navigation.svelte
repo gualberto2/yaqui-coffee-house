@@ -6,10 +6,14 @@
 
 	const links = [
 		{ name: 'Our Story', href: '#our-story-section' },
+		{ name: 'Contact', href: '#contact-form-section' },
 		{ name: 'Location', href: '#location-section' },
 		{ name: 'Hours', href: '#hours-section' },
-		{ name: 'Contact', href: '#contact-form-section' },
-		{ name: 'Menu', href: '/toast' }
+		{
+			name: 'Menu',
+			href: 'https://order.toasttab.com/online/yaqui-coffee-house-chula-vista',
+			target: '_blank'
+		}
 	];
 
 	function scrollToSection(event) {
@@ -33,6 +37,7 @@
 			{#each links as link}
 				<a
 					href={link.href}
+					target={link.target ? link.target : '_self'}
 					class="cursor-pointer text-2xl text-neutral-800 underline-offset-1 hover:underline"
 					on:click={link.name === 'Contact' ||
 					link.name === 'Our Story' ||
@@ -50,7 +55,13 @@
 				<Instagram />
 			</div>
 		</div>
-		<Button size="lg" variant="default" class="ml-6 uppercase">Order Online</Button>
+		<Button
+			size="lg"
+			variant="default"
+			class="ml-6 uppercase"
+			href="https://order.toasttab.com/online/yaqui-coffee-house-chula-vista"
+			target="_blank">Order Online</Button
+		>
 	</div>
 </nav>
 
@@ -118,5 +129,10 @@
 	>
 		<img src={logo} alt="Logo" class="duration-400 h-full object-cover transition-[height]" />
 	</a>
-	<Button size="default" class="absolute right-5 block pb-1 text-center uppercase ">Order</Button>
+	<Button
+		size="default"
+		class="absolute right-5 block pb-1 text-center uppercase "
+		href="https://order.toasttab.com/online/yaqui-coffee-house-chula-vista"
+		target="_blank">Order</Button
+	>
 </nav>

@@ -1,66 +1,91 @@
-<script>
+<script lang="ts">
 	import { Coffee, Instagram, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-svelte';
+
+	const links = [
+		{
+			name: 'Menu',
+			href: 'https://order.toasttab.com/online/yaqui-coffee-house-chula-vista',
+			target: '_blank'
+		},
+		{ name: 'Our Story', href: '#our-story-section' },
+		{ name: 'Hours', href: '#hours-section' },
+		{ name: 'Location', href: '#location-section' },
+		{ name: 'Contact', href: '#contact-form-section' }
+	];
+
+	function scrollToSection(event) {
+		event.preventDefault();
+		const targetId = event.currentTarget.getAttribute('href').substring(1);
+		const targetElement = document.getElementById(targetId);
+		if (targetElement) {
+			targetElement.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
-<footer
-	class="sticky top-0 z-50 mx-auto mt-auto flex w-full flex-col bg-[#6a041d] px-5 py-4 text-white"
->
-	<div><h2 class="text-xl text-white">Yaqui Coffee House</h2></div>
-	<div>Location</div>
-</footer>
+<!-- bg-[#1A120B] py-12 text-[#E5E5CB] -->
+<!-- bg-[#6a041d] text-[#E5E5CB]-->
 
-<footer class="w-full bg-[#1A120B] py-12 text-[#E5E5CB]">
+<footer class="w-full bg-yaqui-foreground py-12 text-white">
 	<div class="mx-auto max-w-7xl px-6">
 		<div class="mb-8 flex justify-center">
-			<div class="flex items-center gap-2">
+			<a href="/" class="flex items-center gap-2">
 				<Coffee size={32} />
-				<span class="text-2xl font-semibold">Brew Haven</span>
-			</div>
+				<span class=" text-4xl font-semibold">Yaqui Coffee House</span>
+			</a>
 		</div>
-		<div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-3">
+		<div class="mb-12 flex flex-col justify-center gap-12 md:flex-row md:gap-20 lg:gap-32">
 			<div class="space-y-4">
-				<h3 class="mb-4 text-xl font-semibold">Visit Us</h3>
-				<div class="flex items-center gap-2">
+				<h3 class="mb-4 text-3xl font-semibold">Visit Us</h3>
+				<a
+					href="https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex items-center gap-2 text-xl transition-colors"
+				>
 					<MapPin size={18} />
-					<span>123 Coffee Street, Brewville</span>
-				</div>
-				<div class="flex items-center gap-2">
+					<span class="">1930 Avenida Escaya suite 101,<br /> Chula Vista, CA 91913</span>
+				</a>
+				<a href="tel:+16194003538" class="flex items-center gap-2">
 					<Phone size={18} />
-					<span>(555) 123-4567</span>
-				</div>
-				<div class="flex items-center gap-2">
+					<span class="text-xl">(619) 400-3538</span>
+				</a>
+				<div class="flex cursor-pointer items-center gap-2">
 					<Mail size={18} />
-					<span>hello@brewhaven.com</span>
+					<span class="text-xl">info@yaquicoffeehouse.com</span>
 				</div>
 			</div>
 			<div>
-				<h3 class="mb-4 text-xl font-semibold">Quick Links</h3>
-				<ul class="space-y-2">
-					<li>
-						<a href="/" class="transition-colors hover:text-[#D5CEA3]"> Our Story </a>
-					</li>
-					<li>
-						<a href="/" class="transition-colors hover:text-[#D5CEA3]"> Menu </a>
-					</li>
-					<li>
-						<a href="/" class="transition-colors hover:text-[#D5CEA3]"> Coffee Guide </a>
-					</li>
-					<li>
-						<a href="/" class="transition-colors hover:text-[#D5CEA3]"> Events </a>
-					</li>
+				<h3 class="mb-4 text-3xl font-semibold">Quick Links</h3>
+				<ul class="flex flex-col space-y-2">
+					{#each links as link}
+						<a
+							href={link.href}
+							target={link.target ? link.target : '_self'}
+							class="text-xl transition-colors hover:text-[#D5CEA3]"
+							on:click={link.name === 'Contact' ||
+							link.name === 'Our Story' ||
+							link.name === 'Location' ||
+							link.name === 'Hours'
+								? scrollToSection
+								: null}
+						>
+							{link.name}
+						</a>
+					{/each}
 				</ul>
 			</div>
 			<div>
-				<h3 class="mb-4 text-xl font-semibold">Stay Connected</h3>
-				<p class="mb-4">Join our newsletter for brewing tips and special offers!</p>
-				<div class="flex gap-2">
+				<h3 class="mb-4 text-3xl font-semibold">Stay Connected</h3>
+				<p class="mb-4 text-xl">Join our newsletter for brewing tips and special offers!</p>
+				<div class="flex flex-col gap-2 sm:flex-row">
 					<input
 						type="email"
 						placeholder="Your email"
-						class="rounded border border-[#D5CEA3] bg-[#3C2A21] px-4 py-2 focus:border-[#E5E5CB] focus:outline-none"
+						class="rounded border border-[#E90C3C] bg-[#27020A] px-4 py-2 placeholder:uppercase focus:border-[#C20A32] focus:outline-none"
 					/>
 					<button
-						class="rounded bg-[#D5CEA3] px-4 py-2 text-[#1A120B] transition-colors hover:bg-[#E5E5CB]"
+						class="rounded bg-white px-4 py-2 uppercase text-[#1A120B] transition-colors hover:bg-[#E5E5CB]"
 					>
 						Subscribe
 					</button>
@@ -68,7 +93,7 @@
 			</div>
 		</div>
 		<div
-			class="flex flex-col items-center justify-between gap-4 border-t border-[#3C2A21] pt-8 md:flex-row"
+			class="flex flex-col items-center justify-between gap-4 border-t border-white pt-8 md:flex-row"
 		>
 			<div class="flex gap-6">
 				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
@@ -81,7 +106,13 @@
 					<Twitter size={24} />
 				</a>
 			</div>
-			<p class="text-sm">© 2023 Brew Haven. All rights reserved.</p>
+			<p class="text-lg">© 2023 Yaqui Coffee House. All rights reserved.</p>
 		</div>
 	</div>
 </footer>
+
+<style>
+	a {
+		cursor: pointer;
+	}
+</style>

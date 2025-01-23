@@ -66,6 +66,11 @@
 	const image = [image1, image2, image3, image4, image5, image6, image7, image8];
 </script>
 
+<svelte:head>
+	<title>Yaqui Coffee House</title>
+	<meta name="Yaqui Coffee House" content="The Heart of Sonoma" />
+</svelte:head>
+
 <section class="hero-bg flex h-[30rem] flex-col items-center sm:min-h-screen">
 	<!-- <div class="pt-48">
 		<h1 class="font-hero z-auto mx-auto text-center text-[120px] leading-[90%] text-white">
@@ -108,7 +113,7 @@
 
 <section class="mx-auto my-10">
 	<div
-		class=" bg-yaqui-primary felt-texture my-20 flex flex-col justify-center py-10 text-white sm:flex-row"
+		class=" felt-texture my-20 flex flex-col justify-center bg-yaqui-primary py-10 text-white sm:flex-row"
 	>
 		<div class="flex flex-col justify-center gap-10 sm:flex-row sm:gap-20">
 			<div class="text-center sm:text-start">
@@ -116,9 +121,24 @@
 				<p class="text-xl">Choose an option...</p>
 			</div>
 			<div class="flex flex-col items-center gap-4">
-				<Button variant="secondary" size="lg">Order Delivery <Car /></Button>
-				<Button variant="secondary" size="lg">Order Pickup <ShoppingBag /></Button>
-				<Button variant="secondary" size="lg">Get Directions <MapPin /></Button>
+				<Button
+					variant="secondary"
+					size="lg"
+					href="https://order.toasttab.com/online/yaqui-coffee-house-chula-vista"
+					target="_blank">Order Delivery <Car /></Button
+				>
+				<Button
+					variant="secondary"
+					size="lg"
+					href="https://order.toasttab.com/online/yaqui-coffee-house-chula-vista"
+					target="_blank">Order Pickup <ShoppingBag /></Button
+				>
+				<Button
+					variant="secondary"
+					size="lg"
+					href="https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6"
+					target="_blank">Get Directions <MapPin /></Button
+				>
 			</div>
 		</div>
 	</div>
@@ -145,7 +165,7 @@
 		</div>
 	</div> -->
 
-	<div id="contact-form-section" class="bg-yaqui-foreground arches-texture my-20 py-10">
+	<div id="contact-form-section" class="arches-texture my-20 bg-yaqui-foreground py-10">
 		<div class="mb-5 text-center text-white">
 			<h4 class=" -[-0.96px] text-center text-4xl font-semibold leading-[125%] text-white">
 				Get In Touch
