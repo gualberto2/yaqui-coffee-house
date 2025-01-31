@@ -1,7 +1,7 @@
 <script lang="ts">
 	import logo from '$lib/images/logo.png';
 	import * as Sheet from '$lib/components/ui/sheet/index.js';
-	import { Instagram, Menu } from 'lucide-svelte';
+	import { Instagram, Menu, Phone } from 'lucide-svelte';
 	import Button from '../ui/button/button.svelte';
 
 	const links = [
@@ -52,7 +52,12 @@
 		</div>
 		<div class="flex flex-row items-center gap-5">
 			<div class="flex cursor-pointer flex-row items-center justify-center gap-4 hover:underline">
-				<Instagram />
+				<a target="_blank" href="https://www.instagram.com/yaquihouse/">
+					<Instagram />
+				</a>
+				<a href="tel:+16194003538" class="flex items-center gap-2">
+					<Phone size={18} />
+				</a>
 			</div>
 		</div>
 		<Button

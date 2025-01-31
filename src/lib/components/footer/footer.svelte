@@ -82,7 +82,7 @@
 					<input
 						type="email"
 						placeholder="Your email"
-						class="rounded border border-[#E90C3C] bg-[#27020A] px-4 py-2 placeholder:uppercase focus:border-[#C20A32] focus:outline-none"
+						class="rounded border border-[#E90C3C] bg-[#27020A] px-4 py-2 uppercase placeholder:uppercase focus:border-[#C20A32] focus:outline-none"
 					/>
 					<button
 						class="rounded bg-white px-4 py-2 uppercase text-[#1A120B] transition-colors hover:bg-[#E5E5CB]"
@@ -99,14 +99,18 @@
 				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
 					<Instagram size={24} />
 				</a>
-				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
+				<a
+					target="_blank"
+					href="https://www.facebook.com/people/YAQUI-Coffee-House/61566139258989/?mibextid=wwXIfr"
+					class="transition-colors hover:text-[#D5CEA3]"
+				>
 					<Facebook size={24} />
 				</a>
 				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
 					<Twitter size={24} />
 				</a>
 			</div>
-			<p class="text-lg">© 2023 Yaqui Coffee House. All rights reserved.</p>
+			<p class="text-lg">© 2025 Yaqui Coffee House. All rights reserved.</p>
 		</div>
 	</div>
 </footer>
