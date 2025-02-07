@@ -8,9 +8,6 @@
 	import image7 from '$lib/images/landing/parallax-image-7.jpg';
 	import image8 from '$lib/images/landing/parallax-image-8.jpg';
 	import aLittleBitAboutUs from '$lib/images/landing/a-little-bit-about-us.jpg';
-	import section1image from '$lib/images/landing/section-1-image.jpg';
-	import section1image2 from '$lib/images/landing/section-1-image2.jpg';
-	import section1image3 from '$lib/images/landing/section-1-image-3.jpg';
 	import ParallaxScroll from '$lib/components/ui/parallax-scroll/parallax-scroll.svelte';
 	import { onMount } from 'svelte';
 	import collageImage1 from '$lib/images/landing/collagePics/image1.jpg';
@@ -71,7 +68,7 @@
 	<meta name="Yaqui Coffee House" content="The Heart of Sonoma" />
 </svelte:head>
 
-<section class="hero-bg flex h-[30rem] flex-col items-center sm:min-h-screen">
+<section class=" flex h-[30rem] flex-col items-center sm:min-h-screen">
 	<!-- <div class="pt-48">
 		<h1 class="font-hero z-auto mx-auto text-center text-[120px] leading-[90%] text-white">
 			Yaqui
@@ -82,6 +79,13 @@
 			<Button size="lg" variant="secondary">Get Directions</Button>
 		</div>
 	</div> -->
+	<video
+		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
+		autoPlay
+		loop
+		muted
+		class="z-50 h-full w-full object-cover"
+	></video>
 </section>
 
 <section
@@ -98,14 +102,14 @@
 		<div class="flex flex-col md:space-y-5">
 			<div class="flex flex-row items-center">
 				<!-- <span class="mr-3 h-28 w-1 rounded-xl bg-[#1e2a4a] sm:h-20 lg:h-28"></span> -->
-				<h3 class="-[-0.96px] text-4xl font-semibold leading-[125%]">
+				<h3 class="-[-0.96px] text-4xl font-semibold leading-[125%] text-neutral-900">
 					So Comfortable, You Might Forget You're Not at Home
 				</h3>
 			</div>
-			<p class="-[1.1px] max-w-5xl text-lg font-extralight leading-[150%]">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam voluptates eos autem
-				sunt, magnam quae atque similique dolore! Provident aliquam maiores cumque ipsa minus
-				adipisci obcaecati mollitia tempora et deserunt?
+			<p class="max-w-5xl text-xl font-extralight leading-[150%] text-neutral-700">
+				At Yaqui Coffee House, we pride ourselves on creating a warm and inviting atmosphere where
+				you can relax and enjoy a cup of our finest coffee. Whether you're here to catch up with
+				friends, work remotely, or simply unwind, we strive to make you feel right at home.
 			</p>
 		</div>
 	</div>

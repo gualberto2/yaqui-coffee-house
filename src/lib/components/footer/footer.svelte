@@ -7,10 +7,20 @@
 			href: 'https://order.toasttab.com/online/yaqui-coffee-house-chula-vista',
 			target: '_blank'
 		},
-		{ name: 'Our Story', href: '#our-story-section' },
+		{ name: 'Our Mission', href: '#our-story-section' },
 		{ name: 'Hours', href: '#hours-section' },
-		{ name: 'Location', href: '#location-section' },
-		{ name: 'Contact', href: '#contact-form-section' }
+		{ name: 'Location', href: 'https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6', target: '_blank' },
+		{ name: 'Contact', href: '#contact-form-section' },
+		{
+			name: 'Account',
+			href: 'https://www.toasttab.com/yaqui-coffee-house-chula-vista/rewardsSignup',
+			target: '_blank'
+		},
+		{
+			name: 'Gift Cards',
+			href: 'https://www.toasttab.com/yaqui-coffee-house-chula-vista/giftcards',
+			target: '_blank'
+		}
 	];
 
 	function scrollToSection(event) {
@@ -57,15 +67,14 @@
 			</div>
 			<div>
 				<h3 class="mb-4 text-3xl font-semibold">Quick Links</h3>
-				<ul class="flex flex-col space-y-2">
+				<div class="grid grid-cols-2 gap-4 gap-x-20">
 					{#each links as link}
 						<a
 							href={link.href}
 							target={link.target ? link.target : '_self'}
 							class="text-xl transition-colors hover:text-[#D5CEA3]"
 							on:click={link.name === 'Contact' ||
-							link.name === 'Our Story' ||
-							link.name === 'Location' ||
+							link.name === 'Our Mission' ||
 							link.name === 'Hours'
 								? scrollToSection
 								: null}
@@ -73,9 +82,9 @@
 							{link.name}
 						</a>
 					{/each}
-				</ul>
+				</div>
 			</div>
-			<div>
+			<!-- <div>
 				<h3 class="mb-4 text-3xl font-semibold">Stay Connected</h3>
 				<p class="mb-4 text-xl">Join our newsletter for brewing tips and special offers!</p>
 				<div class="flex flex-col gap-2 sm:flex-row">
@@ -90,7 +99,7 @@
 						Subscribe
 					</button>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<div
 			class="flex flex-col items-center justify-between gap-4 border-t border-white pt-8 md:flex-row"
