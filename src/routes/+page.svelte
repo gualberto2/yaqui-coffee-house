@@ -67,23 +67,13 @@
 	<title>Yaqui Coffee House</title>
 	<meta name="Yaqui Coffee House" content="The Heart of Sonoma" />
 </svelte:head>
-
-<section class=" flex h-[30rem] flex-col items-center sm:min-h-screen">
-	<!-- <div class="pt-48">
-		<h1 class="font-hero z-auto mx-auto text-center text-[120px] leading-[90%] text-white">
-			Yaqui
-		</h1>
-		<h2 class=" mx-auto text-center text-4xl font-medium uppercase text-white">Coffee House</h2>
-		<div class="flex flex-row items-center justify-center gap-2 pt-5">
-			<Button size="lg" class="	bg-amber-600">Order Online</Button>
-			<Button size="lg" variant="secondary">Get Directions</Button>
-		</div>
-	</div> -->
+<section class="flex h-[30rem] flex-col items-center sm:min-h-screen">
 	<video
 		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
 		autoPlay
 		loop
 		muted
+		playsinline
 		class="z-50 h-full w-full object-cover"
 	></video>
 </section>
