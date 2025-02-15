@@ -65,17 +65,27 @@
 
 <svelte:head>
 	<title>Yaqui Coffee House</title>
-	<meta name="Yaqui Coffee House" content="The Heart of Sonoma" />
+	<meta name="Yaqui Coffee House" content="The Heart of Sonora" />
 </svelte:head>
-<section class="flex h-[30rem] flex-col items-center sm:min-h-screen">
+<section class="relative flex h-[30rem] items-center overflow-hidden sm:min-h-screen">
+	<!-- Blurred background video -->
 	<video
 		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
 		autoPlay
 		loop
 		muted
 		playsinline
-		class="z-50 h-full w-full object-cover"
+		class="absolute left-0 top-0 z-20 h-full w-full scale-125 transform object-cover blur-xl filter"
 	></video>
+	<video
+		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
+		autoPlay
+		loop
+		muted
+		playsinline
+		class="relative z-30 h-full w-full object-contain"
+	></video>
+	<!-- Foreground (zoomed out) video -->
 </section>
 
 <section
@@ -140,7 +150,7 @@
 	<div>
 		<div class="p-1.5sm:gap-5 my-10 flex flex-col items-center justify-center gap-1.5 sm:flex-row">
 			<h3 class=" -[-0.96px] text-center text-4xl font-semibold">Start Your Day Right</h3>
-			<p class="-[1.1px] max-w-5xl text-xl font-thin">Enjoy what Sonoma has to offer</p>
+			<p class="-[1.1px] max-w-5xl text-xl font-thin">Enjoy what Sonora has to offer</p>
 		</div>
 	</div>
 
