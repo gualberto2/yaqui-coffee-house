@@ -28,6 +28,7 @@
 	import collageImage16 from '$lib/images/landing/collagePics/16.jpg';
 	import collageImage17 from '$lib/images/landing/collagePics/17.jpg';
 	import collageImage18 from '$lib/images/landing/collagePics/18.jpg';
+	import giftcard from '$lib/images/gift-card.jpeg';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { Car, Gift, MapPin, ShoppingBag } from 'lucide-svelte';
 
@@ -174,7 +175,7 @@
 			class="mx-auto flex max-w-6xl flex-row items-center justify-center gap-2 px-8 py-2 text-xl font-medium uppercase text-[#8B6F5C] transition-colors duration-300"
 		>
 			<img
-				src="https://mirrorful-production.s3.us-west-1.amazonaws.com/patterns/files/27eefbca-28a7-4bba-ab94-b863c44a75ac/gift-card.jpg"
+				src={giftcard}
 				alt="Yaqui House Coffee Gift Card"
 				class="h-1/2 w-1/2 cursor-pointer rounded-lg object-contain shadow-md transition duration-150 ease-out hover:shadow-2xl"
 			/>
