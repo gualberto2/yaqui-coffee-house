@@ -68,22 +68,13 @@
 	<meta name="Yaqui Coffee House" content="The Heart of Sonora" />
 </svelte:head>
 <section class="relative flex h-[30rem] items-center overflow-hidden sm:min-h-screen">
-	<!-- Blurred background video -->
 	<video
 		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
 		autoPlay
 		loop
 		muted
 		playsinline
-		class="absolute left-0 top-0 z-20 h-full w-full scale-125 transform object-cover blur-xl filter"
-	></video>
-	<video
-		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
-		autoPlay
-		loop
-		muted
-		playsinline
-		class="relative z-30 h-full w-full object-contain"
+		class="relative z-30 h-full w-full object-cover"
 	></video>
 	<!-- Foreground (zoomed out) video -->
 </section>
