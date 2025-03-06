@@ -161,28 +161,34 @@
 		</div>
 	</div> -->
 
-	<section class="gift-card-texture w-full bg-[#8B6F5C] px-4 py-8 text-white">
+	<section id="gift-cards" class="gift-card-texture w-full bg-[#8B6F5C] px-4 py-8 text-white">
 		<div class=" mb-5 mt-2 flex flex-col items-center justify-center gap-1.5 p-1.5 sm:flex-row">
 			<h3 class=" -[-0.96px] text-center text-4xl font-semibold">Gift Cards</h3>
 			<p class="-[1.1px] max-w-5xl text-xl font-thin">
 				Share the warmth of Yaqui House Coffee with someone special.
 			</p>
 		</div>
-		<div class="mx-auto flex max-w-6xl flex-row items-center justify-center">
+		<a
+			href="https://www.toasttab.com/yaqui-coffee-house-chula-vista/giftcards"
+			target="_blank"
+			class="mx-auto flex max-w-6xl flex-row items-center justify-center gap-2 px-8 py-2 text-xl font-medium uppercase text-[#8B6F5C] transition-colors duration-300"
+		>
 			<img
 				src="https://mirrorful-production.s3.us-west-1.amazonaws.com/patterns/files/27eefbca-28a7-4bba-ab94-b863c44a75ac/gift-card.jpg"
 				alt="Yaqui House Coffee Gift Card"
 				class="h-1/2 w-1/2 cursor-pointer rounded-lg object-contain shadow-md transition duration-150 ease-out hover:shadow-2xl"
 			/>
-		</div>
+		</a>
 		<div class="flex w-full flex-row items-center justify-center space-y-8">
 			<div class="mt-8">
-				<button
+				<a
+					href="https://www.toasttab.com/yaqui-coffee-house-chula-vista/giftcards"
+					target="_blank"
 					class="flex items-center gap-2 rounded-full bg-[#E8D5C4] px-8 py-2 text-xl font-medium uppercase text-[#8B6F5C] transition-colors duration-300 hover:bg-white"
 				>
 					<Gift class="h-5 w-5" />
 					Purchase
-				</button>
+				</a>
 			</div>
 		</div>
 	</section>

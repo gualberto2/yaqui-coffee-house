@@ -10,13 +10,12 @@
 		{ name: 'Location', href: '#location-section' },
 		{ name: 'Hours', href: '#hours-section' },
 		{
-			name: 'Account',
-			href: 'https://www.toasttab.com/yaqui-coffee-house-chula-vista/rewardsSignup',
-			target: '_blank'
+			name: 'Gift Cards',
+			href: '#gift-cards'
 		},
 		{
-			name: 'Gift Cards',
-			href: 'https://www.toasttab.com/yaqui-coffee-house-chula-vista/giftcards',
+			name: 'Account',
+			href: 'https://www.toasttab.com/yaqui-coffee-house-chula-vista/rewardsSignup',
 			target: '_blank'
 		}
 	];
@@ -47,7 +46,8 @@
 					on:click={link.name === 'Contact' ||
 					link.name === 'Our Mission' ||
 					link.name === 'Location' ||
-					link.name === 'Hours'
+					link.name === 'Hours' ||
+					link.name === 'Gift Cards'
 						? scrollToSection
 						: null}
 				>
