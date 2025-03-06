@@ -29,7 +29,7 @@
 	import collageImage17 from '$lib/images/landing/collagePics/17.jpg';
 	import collageImage18 from '$lib/images/landing/collagePics/18.jpg';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { Car, MapPin, ShoppingBag } from 'lucide-svelte';
+	import { Car, Gift, MapPin, ShoppingBag } from 'lucide-svelte';
 
 	const collagePics = [
 		collageImage1,
@@ -38,18 +38,18 @@
 		collageImage4,
 		collageImage5,
 		collageImage6,
+		collageImage10,
 		collageImage8,
 		collageImage9,
-		collageImage10,
+		collageImage7,
 		collageImage11,
 		collageImage12,
 		collageImage13,
+		collageImage18,
 		collageImage14,
-		collageImage15,
-		collageImage16,
-		collageImage7,
 		collageImage17,
-		collageImage18
+		collageImage16,
+		collageImage15
 	];
 
 	onMount(() => {
@@ -98,9 +98,10 @@
 				</h3>
 			</div>
 			<p class="max-w-5xl text-xl font-extralight leading-[150%] text-neutral-700">
-				At Yaqui Coffee House, we pride ourselves on creating a warm and inviting atmosphere where
-				you can relax and enjoy a cup of our finest coffee. Whether you're here to catch up with
-				friends, work remotely, or simply unwind, we strive to make you feel right at home.
+				Yaqui Coffee House started with a deep love for coffee in my hometown in the state of
+				Sonora, Mexico, also home of the indigenous Yaqui tribe. This concept brings the perfect
+				fusion of specialty coffee and dynamic recipes inspired in every step of my journey. At
+				Yaqui Coffee House, our culture and motto is to “Never serve anything we are not proud of”.
 			</p>
 		</div>
 	</div>
@@ -139,7 +140,7 @@
 	</div>
 
 	<div>
-		<div class="p-1.5sm:gap-5 my-10 flex flex-col items-center justify-center gap-1.5 sm:flex-row">
+		<div class="my-10 flex flex-col items-center justify-center gap-1.5 p-1.5 sm:flex-row">
 			<h3 class=" -[-0.96px] text-center text-4xl font-semibold">Start Your Day Right</h3>
 			<p class="-[1.1px] max-w-5xl text-xl font-thin">Enjoy what Sonora has to offer</p>
 		</div>
@@ -160,16 +161,31 @@
 		</div>
 	</div> -->
 
-	<div id="contact-form-section" class="arches-texture my-20 bg-yaqui-foreground py-10">
-		<div class="mb-5 text-center text-white">
-			<h4 class=" -[-0.96px] text-center text-4xl font-semibold leading-[125%] text-white">
-				Get In Touch
-			</h4>
+	<section class="gift-card-texture w-full bg-[#8B6F5C] px-4 py-8 text-white">
+		<div class=" mb-5 mt-2 flex flex-col items-center justify-center gap-1.5 p-1.5 sm:flex-row">
+			<h3 class=" -[-0.96px] text-center text-4xl font-semibold">Gift Cards</h3>
+			<p class="-[1.1px] max-w-5xl text-xl font-thin">
+				Share the warmth of Yaqui House Coffee with someone special.
+			</p>
 		</div>
-		<div class="mx-auto max-w-2xl rounded-xl bg-white p-4 text-white">
-			<div id="contact-form" class="px-2 text-white"></div>
+		<div class="mx-auto flex max-w-6xl flex-row items-center justify-center">
+			<img
+				src="https://mirrorful-production.s3.us-west-1.amazonaws.com/patterns/files/27eefbca-28a7-4bba-ab94-b863c44a75ac/gift-card.jpg"
+				alt="Yaqui House Coffee Gift Card"
+				class="h-1/2 w-1/2 cursor-pointer rounded-lg object-contain shadow-md transition duration-150 ease-out hover:shadow-2xl"
+			/>
 		</div>
-	</div>
+		<div class="flex w-full flex-row items-center justify-center space-y-8">
+			<div class="mt-8">
+				<button
+					class="flex items-center gap-2 rounded-full bg-[#E8D5C4] px-8 py-2 text-xl font-medium uppercase text-[#8B6F5C] transition-colors duration-300 hover:bg-white"
+				>
+					<Gift class="h-5 w-5" />
+					Purchase
+				</button>
+			</div>
+		</div>
+	</section>
 
 	<div class="my-20 flex flex-col items-center justify-center" id="location-section">
 		<h3 class=" -[-0.96px] mb-5 text-center text-4xl font-semibold leading-[125%]">Visit Us</h3>
@@ -203,3 +219,14 @@
 		</div>
 	</div>
 </section>
+
+<div id="contact-form-section" class="arches-texture mt-20 bg-yaqui-foreground py-10">
+	<div class="mb-5 text-center text-white">
+		<h4 class=" -[-0.96px] text-center text-4xl font-semibold leading-[125%] text-white">
+			Get In Touch
+		</h4>
+	</div>
+	<div class="mx-auto max-w-2xl rounded-xl bg-white p-4 text-white">
+		<div id="contact-form" class="px-2 text-white"></div>
+	</div>
+</div>
