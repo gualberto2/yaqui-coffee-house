@@ -70,13 +70,23 @@
 </svelte:head>
 <section class="relative flex h-[30rem] items-center overflow-hidden sm:min-h-screen">
 	<video
-		src="https://res.cloudinary.com/dazkujlz2/video/upload/v1738947307/vfw46kiw01bvvklsvjgv.mp4"
+		title="Gumlet Video Player - Yaqui Coffee House"
 		autoPlay
+		src="https://video.gumlet.io/67e177ee68c224a51551c6bf/67e1793068c224a51551cfaf/download.mp4"
 		loop
 		muted
 		playsinline
 		class="relative z-30 h-full w-full object-cover"
 	></video>
+	<!-- <iframe
+		loading="lazy"
+		title="Gumlet video player"
+		src="https://play.gumlet.io/embed/67e1793068c224a51551cfaf?preload=true&autoplay=true&loop=true&background=true&disable_player_controls=true"
+		style="border:none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+		allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;"
+	>
+	</iframe> -->
+
 	<!-- Foreground (zoomed out) video -->
 </section>
 
