@@ -105,7 +105,11 @@
 			class="flex flex-col items-center justify-between gap-4 border-t border-white pt-8 md:flex-row"
 		>
 			<div class="flex gap-6">
-				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
+				<a
+					target="_blank"
+					href="https://www.instagram.com/yaquihouse/"
+					class="transition-colors hover:text-[#D5CEA3]"
+				>
 					<Instagram size={24} />
 				</a>
 				<a
@@ -114,9 +118,6 @@
 					class="transition-colors hover:text-[#D5CEA3]"
 				>
 					<Facebook size={24} />
-				</a>
-				<a href="/" class="transition-colors hover:text-[#D5CEA3]">
-					<Twitter size={24} />
 				</a>
 			</div>
 			<p class="text-lg">© 2025 Yaqui Coffee House. All rights reserved.</p>
