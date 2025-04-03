@@ -205,7 +205,12 @@
 	</section>
 
 	<div class="my-20 flex flex-col items-center justify-center" id="location-section">
-		<h3 class=" -[-0.96px] mb-5 text-center text-4xl font-semibold leading-[125%]">Visit Us</h3>
+		<h3
+			id="hours-section"
+			class=" -[-0.96px] mb-5 text-center text-4xl font-semibold leading-[125%]"
+		>
+			Visit Us
+		</h3>
 		<a
 			href="https://maps.app.goo.gl/Cz7kFZg73Kx4T1tk6"
 			target="_blank"
@@ -214,10 +219,7 @@
 		>
 			1930 Avenida Escaya suite 101, Chula Vista, CA 91913
 		</a>
-		<div
-			class="-[1.1px] flex flex-col items-center justify-center gap-1.5 text-2xl leading-[150%]"
-			id="hours-section"
-		>
+		<div class="-[1.1px] flex flex-col items-center justify-center gap-1.5 text-2xl leading-[150%]">
 			<div class="flex flex-row items-center justify-center gap-2 font-light">
 				<p>M-F</p>
 				<p>|</p>
