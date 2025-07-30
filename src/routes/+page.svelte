@@ -221,7 +221,10 @@
 		</a>
 		<div class="-[1.1px] flex flex-col items-center justify-center gap-1.5 text-2xl leading-[150%]">
 			<div class="flex flex-row items-center justify-center gap-2 font-light">
-				<p>M-F</p>
+				<p>CLOSED MONDAYS</p>
+			</div>
+			<div class="flex flex-row items-center justify-center gap-2 font-light">
+				<p>T-F</p>
 				<p>|</p>
 				<p>6am-4pm</p>
 			</div>
